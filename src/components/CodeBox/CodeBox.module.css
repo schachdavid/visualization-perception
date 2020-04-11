@@ -1,0 +1,37 @@
+.container {
+  height: 100%;
+  width: 100%;
+  border: 0.05rem rgb(216, 216, 216) solid;
+  padding: 0.05rem 0;
+  border-radius: 0.2rem;
+  overflow: hidden;
+}
+
+.content {
+  overflow: scroll;
+  font-size: 0.8rem;
+  height: calc(100% - 2rem);
+}
+
+.headLine {
+  background-color: rgb(245, 245, 245);
+  height: 2rem;
+  border-bottom: 0.05rem rgb(216, 216, 216) solid;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.copyIcon {
+  font-size: 1.3rem;
+  color: grey;
+  height: 100%;
+  width: 2rem;
+  border-left: 0.05rem rgb(216, 216, 216) solid;
+  padding: 0.1rem 0.5rem;
+  box-sizing: border-box;
+}
+
+.copyIcon:hover {
+  background-color: rgb(230, 230, 230);
+  cursor: pointer;
+}
