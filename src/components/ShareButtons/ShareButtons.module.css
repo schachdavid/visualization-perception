@@ -26,23 +26,23 @@
 }
 
 .socialMediaFooter a:nth-child(2) {
-  background-color: #0e76a8;
+  background-color: #0088cc;
 }
 
 .socialMediaFooter a:hover:nth-child(2) {
-  background-color: rgb(18, 148, 208);
+  background-color: #4b9fc9;
 }
 
 .socialMediaFooter a:nth-child(3) {
-  background-color: #24292e;
+  background-color: #25d366;
 }
 
 .socialMediaFooter a:hover:nth-child(3) {
-  background-color: rgb(57, 65, 72);
+  background-color: #5cd588;
 }
 
 .socialMediaFooter .icon {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: rgb(255, 255, 255);
 }
 

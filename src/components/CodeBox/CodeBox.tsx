@@ -1,7 +1,7 @@
 import React from 'react';
-import { FiCopy } from 'react-icons/fi';
+import { MdContentCopy } from 'react-icons/md';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { qtcreatorLight } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { darcula } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import styles from './CodeBox.module.css';
 
 interface IProps {
@@ -9,17 +9,16 @@ interface IProps {
 }
 
 export const CodeBox: React.FC<IProps> = ({ code }) => {
+  const copyCode = () => {
+    navigator.clipboard.writeText(code);
+  };
+
   return (
     <div className={styles.container}>
-      <div className={styles.headLine}>
-        <FiCopy className={styles.copyIcon} />
-      </div>
+      <MdContentCopy className={styles.copyIcon} onClick={copyCode} />
+
       <div className={styles.content}>
-        <SyntaxHighlighter
-          language="json"
-          style={qtcreatorLight}
-          showLineNumbers
-        >
+        <SyntaxHighlighter language="json" style={darcula} >
           {code}
         </SyntaxHighlighter>
       </div>

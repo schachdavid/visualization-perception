@@ -1,36 +1,26 @@
 import React, { useEffect, useState } from 'react';
-import { ReactSurveyModel, StylesManager } from 'survey-react';
+import {
+  Bar,
+  BarChart,
+  Cell,
+  LabelList,
+  ResponsiveContainer,
+  XAxis,
+} from 'recharts';
+import { ReactSurveyModel, StylesManager, Survey } from 'survey-react';
 import 'survey-react/survey.css';
-import { surveyData } from '../../surveyData';
-import { CodeBox } from '../CodeBox/CodeBox';
-import { ShareButtons } from '../ShareButtons/ShareButtons';
+import { chartData } from '../../chartData';
+import { getSurveyData } from '../../surveyData';
+import { CompletedPage } from '../CompletedPage/CompletedPage';
 import styles from './SurveyPanel.module.css';
 
-const chartData = [
-  [
-    { name: 'Lebenserwartung Raucher', value: 76 },
-    { name: 'Lebenserwartung Nichtraucher', value: 68 },
-  ],
-  [
-    { name: 'Lebenserwartung Raucher', value: 76 },
-    { name: 'Lebenserwartung Nichtraucher', value: 68 },
-  ],
-];
-
-const obj = {
-  Quality: { 'does what it claims': '1' },
-  satisfaction: 5,
-  'recommend friends': 5,
-  suggestions: 'sef',
-  pricelimit: { mostamount: 'sef', leastamount: 'sef' },
-  email: 'sefsef',
-};
-
 export const SurveyPanel: React.FC = () => {
-  const [survey, setSurvey] = useState(new ReactSurveyModel(surveyData));
+  const [survey, setSurvey] = useState(new ReactSurveyModel(getSurveyData()));
   const [displayChart, setDisplayChart] = useState(true);
   const [currentChartNo, setCurrentChartNo] = useState(0);
   const [isCompleted, setIsCompleted] = useState(false);
+
+  const numberOfCharts = chartData.length;
 
   useEffect(() => {
     StylesManager.applyTheme('winter');
@@ -38,7 +28,7 @@ export const SurveyPanel: React.FC = () => {
   }, []);
 
   const handleNext = () => {
-    if (survey.currentPageNo >= 1) {
+    if (survey.currentPageNo >= numberOfCharts - 1) {
       if (survey.isLastPage) setIsCompleted(true);
       else survey.nextPage();
     } else if (
@@ -54,64 +44,52 @@ export const SurveyPanel: React.FC = () => {
     }
   };
 
-  return (
-    <div className={styles.container}>
-      <div className={styles.completedPage}>
-        <h1>Vielen Dank für deine Hilfe!</h1>
-        <div>
-          <div>
-            Domäne: <span className={styles.xValue}>1.3</span>
-          </div>
-          <div>
-            Erwartungskonformität: <span className={styles.xValue}>1.4</span>
-          </div>
-          <div>
-            Betroffenheit: <span className={styles.xValue}>1.2</span>
-          </div>
-        </div>
-        <div className={styles.answersContainer}>
-          <div className={styles.answers}>Deine Antworten</div>
-          <div className={styles.codeBox}>
-            <CodeBox code={JSON.stringify(obj, null, 4)}></CodeBox>
-          </div>
-        </div>
+  const note = chartData[currentChartNo]?.note ? (
+    <div className={styles.chartNote}> {chartData[currentChartNo].note}</div>
+  ) : (
+    <div className={styles.chartNote}></div>
+  );
 
-        <div className={styles.shareContainer}>
-          <div className={styles.sharePlease}>
-            Teile deine Antworten mit mir damit ich sie auswerten kann:
-          </div>
-          <ShareButtons></ShareButtons>
-        </div>
-      </div>
-
-      {/* {displayChart && !isCompleted ? (
-        <PieChart width={450} height={300} className={styles.chart}>
-          <Legend verticalAlign="top" />
-          <Pie
-            data={chartData[currentChartNo]}
-            labelLine={false}
-            outerRadius={100}
-            dataKey="value"
-          >
+  const page = isCompleted ? (
+    <CompletedPage data={survey.data}></CompletedPage>
+  ) : displayChart ? (
+    <>
+      <h1 className={styles.chartTitle}>{chartData[currentChartNo].name}</h1>
+      <ResponsiveContainer className={styles.chartContainer} width={300}>
+        <BarChart
+          data={chartData[currentChartNo].data}
+          barSize={70}
+          barCategoryGap={0}
+        >
+          <XAxis dataKey="none" tickLine={false} tickSize={0}></XAxis>
+          <Bar dataKey="value">
             <Cell fill="#8884d8" />
-            <Cell fill="#0088FE" />
             <Cell fill="#00C49F" />
-            <Cell fill="#FF8042" />
-          </Pie>
-        </PieChart>
-      ) : (
-        <Survey model={survey} />
-      )}
-      {!isCompleted ? (
+            <LabelList dataKey="name" position="bottom" />
+          </Bar>
+        </BarChart>
+      </ResponsiveContainer>
+      <div className={styles.footLine}>
+        {note}
         <input
           className={styles.nextButton}
-          type="button"
+          type="submit"
           value="Weiter"
           onClick={handleNext}
         />
-      ) : (
-        <CodePanel code={JSON.stringify(obj, null, 4)}></CodePanel>
-      )} */}
-    </div>
+      </div>
+    </>
+  ) : (
+    <>
+      <Survey model={survey} />
+      <input
+        className={styles.nextButton}
+        type="submit"
+        value="Weiter"
+        onClick={handleNext}
+      />
+    </>
   );
+
+  return <div className={styles.container}>{page}</div>;
 };

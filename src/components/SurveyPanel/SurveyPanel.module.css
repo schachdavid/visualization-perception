@@ -6,10 +6,45 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  border-radius: 2px;
+  overflow: hidden;
+  padding: 1.5rem;
 }
 
 .chart {
+  font-size: 0.8rem;
+}
+
+.chartContainer {
+  height: 16rem !important;
   margin: auto;
+  font-size: 0.7rem;
+}
+
+.chartTitle {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 1.5rem;
+  max-width: 80%;
+}
+
+.chartNote {
+  font-size: 0.6rem;
+  color: rgb(170, 170, 170);
+  max-width: 50%;
+  align-self: flex-end;
+}
+
+svg text {
+  fill: black;
+}
+
+.footLine {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .nextButton {
@@ -22,55 +57,18 @@
   cursor: pointer;
   padding: 0 2em;
   border-radius: 2px;
-  margin: 1.2rem 1.4rem;
   align-self: flex-end;
+  font-family: 'Inter', sans-serif;
 }
 
-.codeBox {
-  box-sizing: border-box;
-  width: 100%;
-  height: 15rem;
-  padding: 1rem;
+.nextButton:hover {
+  background-color: rgb(68, 67, 72);
 }
 
-.completedPage {
-  height: 35rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-
-h1 {
-  font-size: 1.5rem;
-}
-
-.xValue {
-  color: grey;
-}
-
-.shareContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 70%;
-  margin-bottom: 1.2rem;
-}
-.sharePlease {
-  text-align: center;
-  margin-bottom: 0.8rem;
-  font-size: 0.9rem;
-}
-
-.answers {
-  font-size: 0.9rem;
-}
-
-.answersContainer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 0.5rem;
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+  }
 }

@@ -1,33 +1,38 @@
 import React from 'react';
-import { FiGithub, FiLinkedin, FiMessageSquare } from 'react-icons/fi';
+import { FaTelegramPlane, FaWhatsapp } from 'react-icons/fa';
+import { FiMail } from 'react-icons/fi';
 import styles from './ShareButtons.module.css';
 
-interface IProps {}
+interface IProps {
+  code: string;
+}
 
-export const ShareButtons: React.FC<IProps> = ({}) => {
+export const ShareButtons: React.FC<IProps> = ({ code }) => {
   return (
     <div className={styles.container}>
       <div className={styles.socialMediaFooter}>
         <a
-          href="mailto:schachdavid@web.de"
+          href={`mailto:schachdavid@web.de?subject=Visualization Antworten&body=Hi David,
+          hier die Antworten der Umfrage:
+          ${code}`}
           className={styles.socialMediaLink}
-          aria-label="Send an Email"
+          aria-label="Send via Email"
         >
-          <FiMessageSquare className={styles.icon} />
+          <FiMail className={styles.icon} />
         </a>
         <a
-          href="https://www.linkedin.com/in/david-schach-668a22137/"
+          href={`https://telegram.me/share/url?url=${code}`}
           className={styles.socialMediaLink}
-          aria-label="View LinkedIn Profile"
+          aria-label="Send via Telegram"
         >
-          <FiLinkedin className={styles.icon} />
+          <FaTelegramPlane className={styles.icon} />
         </a>
         <a
-          href="https://github.com/schachdavid"
+          href={`https://wa.me/?text=${code}`}
           className={styles.socialMediaLink}
-          aria-label="View Github Profile"
+          aria-label="Send via Whatsapp"
         >
-          <FiGithub className={styles.icon} />
+          <FaWhatsapp className={styles.icon} />
         </a>
       </div>
     </div>
