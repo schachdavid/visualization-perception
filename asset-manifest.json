@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/visualization-perception/static/css/main.59dde410.chunk.css",
+    "main.css": "/visualization-perception/static/css/main.2958cfa5.chunk.css",
     "main.js": "/visualization-perception/static/js/main.e376b61e.chunk.js",
     "main.js.map": "/visualization-perception/static/js/main.e376b61e.chunk.js.map",
     "runtime-main.js": "/visualization-perception/static/js/runtime-main.a039230d.js",
@@ -9,17 +9,17 @@
     "static/js/2.a2853ea7.chunk.js": "/visualization-perception/static/js/2.a2853ea7.chunk.js",
     "static/js/2.a2853ea7.chunk.js.map": "/visualization-perception/static/js/2.a2853ea7.chunk.js.map",
     "index.html": "/visualization-perception/index.html",
-    "precache-manifest.d48ab8f02660980bb3c1404618db0d1e.js": "/visualization-perception/precache-manifest.d48ab8f02660980bb3c1404618db0d1e.js",
+    "precache-manifest.9bba602a52d1f7e59e67c00c841875a0.js": "/visualization-perception/precache-manifest.9bba602a52d1f7e59e67c00c841875a0.js",
     "service-worker.js": "/visualization-perception/service-worker.js",
     "static/css/2.c2395193.chunk.css.map": "/visualization-perception/static/css/2.c2395193.chunk.css.map",
-    "static/css/main.59dde410.chunk.css.map": "/visualization-perception/static/css/main.59dde410.chunk.css.map",
+    "static/css/main.2958cfa5.chunk.css.map": "/visualization-perception/static/css/main.2958cfa5.chunk.css.map",
     "static/js/2.a2853ea7.chunk.js.LICENSE.txt": "/visualization-perception/static/js/2.a2853ea7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a039230d.js",
     "static/css/2.c2395193.chunk.css",
     "static/js/2.a2853ea7.chunk.js",
-    "static/css/main.59dde410.chunk.css",
+    "static/css/main.2958cfa5.chunk.css",
     "static/js/main.e376b61e.chunk.js"
   ]
 }
