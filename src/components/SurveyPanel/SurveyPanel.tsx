@@ -12,6 +12,7 @@ import 'survey-react/survey.css';
 import { chartData } from '../../chartData';
 import { getSurveyData } from '../../surveyData';
 import { CompletedPage } from '../CompletedPage/CompletedPage';
+import { TitlePage } from '../TitlePage/TitlePage';
 import styles from './SurveyPanel.module.css';
 
 export const SurveyPanel: React.FC = () => {
@@ -19,6 +20,7 @@ export const SurveyPanel: React.FC = () => {
   const [displayChart, setDisplayChart] = useState(true);
   const [currentChartNo, setCurrentChartNo] = useState(0);
   const [isCompleted, setIsCompleted] = useState(false);
+  const [hasStarted, setHasStarted] = useState(false);
 
   const numberOfCharts = chartData.length;
 
@@ -50,10 +52,12 @@ export const SurveyPanel: React.FC = () => {
     <div className={styles.chartNote}></div>
   );
 
-  const page = isCompleted ? (
+  const page = !hasStarted ? (
+    <TitlePage onStart={() => setHasStarted(true)} />
+  ) : isCompleted ? (
     <CompletedPage data={survey.data}></CompletedPage>
   ) : displayChart ? (
-    <>
+    <div className={styles.surveyContainer}>
       <h1 className={styles.chartTitle}>{chartData[currentChartNo].name}</h1>
       <ResponsiveContainer className={styles.chartContainer} width={300}>
         <BarChart
@@ -78,9 +82,9 @@ export const SurveyPanel: React.FC = () => {
           onClick={handleNext}
         />
       </div>
-    </>
+    </div>
   ) : (
-    <>
+    <div className={styles.surveyContainer}>
       <Survey model={survey} />
       <input
         className={styles.nextButton}
@@ -88,7 +92,7 @@ export const SurveyPanel: React.FC = () => {
         value="Weiter"
         onClick={handleNext}
       />
-    </>
+    </div>
   );
 
   return <div className={styles.container}>{page}</div>;

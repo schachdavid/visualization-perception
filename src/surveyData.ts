@@ -59,7 +59,7 @@ export const getSurveyData = () => {
           type: 'text',
           inputType: 'number',
           title: chart.question,
-          placeHolder: '',
+          placeHolder: chart.answerPlaceHolder,
           isRequired: true,
         },
       ],

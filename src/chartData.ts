@@ -1,10 +1,17 @@
+export enum answerType {
+  percentage,
+  multiples,
+}
+
 export const chartData = [
   {
     name:
       'Anteil der 30 bis 35 Jährigen ohne beruflichen Bildungsabschluss (Studium, Ausbildung etc.)',
     question:
-      'Um wie viel mal ist der Anteil bei Personen mit Migrationshintergrund größer? (Kommazahl möglich)',
+      'Um das wie Vielfache ist der Anteil bei Personen mit Migrationshintergrund größer?',
     expectedAnswer: 3.2,
+    answerPlaceHolder: '10,5 mal',
+    answerType: answerType.multiples,
     data: [
       { name: 'Mit Migrationshintergrund', value: 32 },
       { name: 'Ohne Migrationshintergrund', value: 10 },
@@ -15,6 +22,8 @@ export const chartData = [
     question:
       'Wie groß ist der Anteil der Schüler auf Privatschulen in Prozent?',
     expectedAnswer: 9,
+    answerPlaceHolder: '99%',
+
     data: [
       { name: 'Schüler in öffentlichen Schulen', value: 81 },
       { name: 'Schüler auf Privatschulen', value: 9 },
@@ -26,6 +35,7 @@ export const chartData = [
     question:
       'Wie viel geringer ist der Lohn in Mecklenburg-Vorpommern in Prozent?',
     expectedAnswer: 0.1968,
+    answerPlaceHolder: '99%',
     data: [
       { name: 'Berlin', value: 42525 },
       { name: 'Mecklenburg-Vorpommern', value: 34155 },
@@ -35,8 +45,9 @@ export const chartData = [
     name:
       'Anteil der Menschen die den Begriff Blockchain kennen in Deutschland',
     question:
-      'Wie groß ist der Anteil der Menschen die den Begriff kennen in Prozent?',
+      'Wie groß ist der Anteil der Menschen, die den Begriff kennen in Prozent?',
     expectedAnswer: 14,
+    answerPlaceHolder: '99%',
     data: [
       { name: 'nicht bekannt', value: 86 },
       { name: 'bekannt', value: 14 },
@@ -47,6 +58,8 @@ export const chartData = [
     question:
       'Um wie viel prozent geringer ist der Ausstoß von Treibhausgasen in Fernlinienbussen als in Zügen?',
     expectedAnswer: 10,
+    answerPlaceHolder: '99%',
+
     data: [
       { name: 'Eisenbahn, Fernverkehr', value: 32 },
       { name: 'Fernlinienbus', value: 29 },
@@ -55,8 +68,9 @@ export const chartData = [
   {
     name: 'CO² Ausstoß',
     question:
-      'Um wie viel mal ist der CO² Ausstoß größer bei einer Flugreise nach Südostasien als durch das tägliche pendeln mit dem Auto?',
+      'Um das wie Vielfache ist der CO² Ausstoß größer bei einer Flugreise nach Südostasien als durch das tägliche pendeln mit dem Auto?',
     expectedAnswer: 6.069,
+    answerPlaceHolder: '10,5 mal',
     data: [
       { name: 'Berufspendler Auto pro Jahr*', value: 0.87 },
       { name: 'Flugreise nach Südostasien', value: 5.28 },

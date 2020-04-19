@@ -11,12 +11,18 @@ interface IProps {
 export const CompletedPage: React.FC<IProps> = ({ data }) => {
   const dataWithX = { ...data };
 
-  dataWithX.xValueDomain =
-    data[Object.keys(data)[0]] / chartData[0].expectedAnswer;
-  dataWithX.xValueExpected =
-    data[Object.keys(data)[1]] / chartData[1].expectedAnswer;
   dataWithX.xValueAffected =
-    data[Object.keys(data)[2]] / chartData[2].expectedAnswer;
+    (data[Object.keys(data)[0]] / chartData[0].expectedAnswer +
+      data[Object.keys(data)[1]] / chartData[1].expectedAnswer) /
+    2;
+  dataWithX.xValueDomain =
+    (data[Object.keys(data)[2]] / chartData[2].expectedAnswer +
+      data[Object.keys(data)[3]] / chartData[3].expectedAnswer) /
+    2;
+  dataWithX.xValueDomain =
+    (data[Object.keys(data)[4]] / chartData[4].expectedAnswer +
+      data[Object.keys(data)[5]] / chartData[5].expectedAnswer) /
+    2;
 
   const code = JSON.stringify(dataWithX, null, 4);
 
