@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/schachdavid/visualization-perception/static/css/main.bba5c7b7.chunk.css",
+    "main.js": "/schachdavid/visualization-perception/static/js/main.4b4b2f47.chunk.js",
+    "main.js.map": "/schachdavid/visualization-perception/static/js/main.4b4b2f47.chunk.js.map",
+    "runtime-main.js": "/schachdavid/visualization-perception/static/js/runtime-main.88999dd8.js",
+    "runtime-main.js.map": "/schachdavid/visualization-perception/static/js/runtime-main.88999dd8.js.map",
+    "static/css/2.c2395193.chunk.css": "/schachdavid/visualization-perception/static/css/2.c2395193.chunk.css",
+    "static/js/2.69fba4a9.chunk.js": "/schachdavid/visualization-perception/static/js/2.69fba4a9.chunk.js",
+    "static/js/2.69fba4a9.chunk.js.map": "/schachdavid/visualization-perception/static/js/2.69fba4a9.chunk.js.map",
+    "index.html": "/schachdavid/visualization-perception/index.html",
+    "precache-manifest.02180e7a856bf1610d87667c89b0a228.js": "/schachdavid/visualization-perception/precache-manifest.02180e7a856bf1610d87667c89b0a228.js",
+    "service-worker.js": "/schachdavid/visualization-perception/service-worker.js",
+    "static/css/2.c2395193.chunk.css.map": "/schachdavid/visualization-perception/static/css/2.c2395193.chunk.css.map",
+    "static/css/main.bba5c7b7.chunk.css.map": "/schachdavid/visualization-perception/static/css/main.bba5c7b7.chunk.css.map",
+    "static/js/2.69fba4a9.chunk.js.LICENSE.txt": "/schachdavid/visualization-perception/static/js/2.69fba4a9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.88999dd8.js",
+    "static/css/2.c2395193.chunk.css",
+    "static/js/2.69fba4a9.chunk.js",
+    "static/css/main.bba5c7b7.chunk.css",
+    "static/js/main.4b4b2f47.chunk.js"
+  ]
+}
