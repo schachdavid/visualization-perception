@@ -20,9 +20,19 @@
   color: rgb(193, 193, 193);
   margin-bottom: 1rem;
 }
+
+.dataDisclaimer {
+  font-size: 0.7rem;
+  color: rgb(193, 193, 193);
+  margin-top: 1rem;
+}
+
+.content {
+  max-width: 70%;
+}
+
 .assignment {
   font-size: 1rem;
-  max-width: 80%;
 }
 
 .assignment p {
@@ -46,4 +56,13 @@
 
 .nextButton:hover {
   background-color: #00ae8e;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 100vw;
+    height: 100%;
+    box-sizing: border-box;
+  }
 }

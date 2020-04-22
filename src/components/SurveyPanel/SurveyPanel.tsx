@@ -7,6 +7,7 @@ import {
   ResponsiveContainer,
   XAxis,
 } from 'recharts';
+import showdown from 'showdown';
 import { ReactSurveyModel, StylesManager, Survey } from 'survey-react';
 import 'survey-react/survey.css';
 import { chartData } from '../../chartData';
@@ -26,6 +27,16 @@ export const SurveyPanel: React.FC = () => {
 
   useEffect(() => {
     StylesManager.applyTheme('winter');
+    let converter = new showdown.Converter();
+    survey.onTextMarkdown.add(function (survey, options) {
+      //convert the mardown text to html
+      var str = converter.makeHtml(options.text);
+      //remove root paragraphs <p></p>
+      str = str.substring(3);
+      str = str.substring(0, str.length - 4);
+      //set html
+      options.html = str;
+    });
     return () => {};
   }, []);
 

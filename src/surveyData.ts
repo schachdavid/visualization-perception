@@ -10,8 +10,8 @@ export const getSurveyData = () => {
         questions: [
           {
             type: 'radiogroup',
-            name: 'migrationshintergrund',
-            title: 'Hast du einen Migrationshintergrund?',
+            name: 'berlinMiete',
+            title: 'Wohnst du in Berlin in einer Mietwohnung?',
             choices: ['Ja', 'Nein'],
           },
         ],
@@ -44,6 +44,28 @@ export const getSurveyData = () => {
             title: 'IT',
             mininumRateDescription: 'sehr schlecht',
             maximumRateDescription: 'sehr gut',
+          },
+        ],
+      },
+      {
+        questions: [
+          {
+            type: 'radiogroup',
+            name: 'zugvsbus',
+            title:
+              'Hast du erwartet, dass Fernbusse weniger Treibhausgase produzieren als Züge?',
+            choices: ['Ja', 'Nein'],
+          },
+        ],
+      },
+      {
+        questions: [
+          {
+            type: 'radiogroup',
+            name: 'flugvsauto',
+            title:
+              'Hast du erwartet, dass interkontinentale Flugreisen viel mehr CO2 produzieren als das tägliche Pendeln mit dem Auto?',
+            choices: ['Ja', 'Nein'],
           },
         ],
       },

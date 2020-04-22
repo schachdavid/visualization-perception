@@ -6,11 +6,13 @@ import styles from './CodeBox.module.css';
 
 interface IProps {
   code: string;
+  onCopyClick: () => any;
 }
 
-export const CodeBox: React.FC<IProps> = ({ code }) => {
+export const CodeBox: React.FC<IProps> = ({ code, onCopyClick }) => {
   const copyCode = () => {
     navigator.clipboard.writeText(code);
+    onCopyClick();
   };
 
   return (
@@ -18,7 +20,7 @@ export const CodeBox: React.FC<IProps> = ({ code }) => {
       <MdContentCopy className={styles.copyIcon} onClick={copyCode} />
 
       <div className={styles.content}>
-        <SyntaxHighlighter language="json" style={darcula} >
+        <SyntaxHighlighter language="json" style={darcula}>
           {code}
         </SyntaxHighlighter>
       </div>

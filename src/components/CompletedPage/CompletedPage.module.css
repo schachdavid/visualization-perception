@@ -49,3 +49,21 @@ h1 {
   align-items: center;
   margin-top: 1rem;
 }
+
+.copyMessage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-top: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.1s ease-in;
+}
+
+.blendInCopyMessage {
+  visibility: visible;
+  opacity: 1;
+}
