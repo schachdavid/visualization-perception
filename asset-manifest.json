@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/visualization-perception/static/css/main.ebae47af.chunk.css",
-    "main.js": "/visualization-perception/static/js/main.f06599c2.chunk.js",
-    "main.js.map": "/visualization-perception/static/js/main.f06599c2.chunk.js.map",
-    "runtime-main.js": "/visualization-perception/static/js/runtime-main.a039230d.js",
-    "runtime-main.js.map": "/visualization-perception/static/js/runtime-main.a039230d.js.map",
-    "static/css/2.c2395193.chunk.css": "/visualization-perception/static/css/2.c2395193.chunk.css",
-    "static/js/2.67d64d67.chunk.js": "/visualization-perception/static/js/2.67d64d67.chunk.js",
-    "static/js/2.67d64d67.chunk.js.map": "/visualization-perception/static/js/2.67d64d67.chunk.js.map",
-    "index.html": "/visualization-perception/index.html",
-    "precache-manifest.7e7cf8b882825731d8f721ee31bd121d.js": "/visualization-perception/precache-manifest.7e7cf8b882825731d8f721ee31bd121d.js",
-    "service-worker.js": "/visualization-perception/service-worker.js",
-    "static/css/2.c2395193.chunk.css.map": "/visualization-perception/static/css/2.c2395193.chunk.css.map",
-    "static/css/main.ebae47af.chunk.css.map": "/visualization-perception/static/css/main.ebae47af.chunk.css.map",
-    "static/js/2.67d64d67.chunk.js.LICENSE.txt": "/visualization-perception/static/js/2.67d64d67.chunk.js.LICENSE.txt"
+    "main.css": "/perception-survey/static/css/main.0693f95e.chunk.css",
+    "main.js": "/perception-survey/static/js/main.5c478fa4.chunk.js",
+    "main.js.map": "/perception-survey/static/js/main.5c478fa4.chunk.js.map",
+    "runtime-main.js": "/perception-survey/static/js/runtime-main.ef42bae1.js",
+    "runtime-main.js.map": "/perception-survey/static/js/runtime-main.ef42bae1.js.map",
+    "static/css/2.c2395193.chunk.css": "/perception-survey/static/css/2.c2395193.chunk.css",
+    "static/js/2.67d64d67.chunk.js": "/perception-survey/static/js/2.67d64d67.chunk.js",
+    "static/js/2.67d64d67.chunk.js.map": "/perception-survey/static/js/2.67d64d67.chunk.js.map",
+    "index.html": "/perception-survey/index.html",
+    "precache-manifest.e2ecd130ce42615599434a53e7e37625.js": "/perception-survey/precache-manifest.e2ecd130ce42615599434a53e7e37625.js",
+    "service-worker.js": "/perception-survey/service-worker.js",
+    "static/css/2.c2395193.chunk.css.map": "/perception-survey/static/css/2.c2395193.chunk.css.map",
+    "static/css/main.0693f95e.chunk.css.map": "/perception-survey/static/css/main.0693f95e.chunk.css.map",
+    "static/js/2.67d64d67.chunk.js.LICENSE.txt": "/perception-survey/static/js/2.67d64d67.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.a039230d.js",
+    "static/js/runtime-main.ef42bae1.js",
     "static/css/2.c2395193.chunk.css",
     "static/js/2.67d64d67.chunk.js",
-    "static/css/main.ebae47af.chunk.css",
-    "static/js/main.f06599c2.chunk.js"
+    "static/css/main.0693f95e.chunk.css",
+    "static/js/main.5c478fa4.chunk.js"
   ]
 }
